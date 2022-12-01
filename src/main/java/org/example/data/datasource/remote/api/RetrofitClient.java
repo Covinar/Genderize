@@ -12,7 +12,7 @@ public class RetrofitClient {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.genderize.io")
+                .baseUrl("https://api.genderize.io/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

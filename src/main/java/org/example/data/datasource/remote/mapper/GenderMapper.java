@@ -4,9 +4,15 @@ import org.example.data.datasource.dto.GenderDto;
 import org.example.domain.entitiy.GenderEntity;
 
 public class GenderMapper {
+    private GenderEntity.Gender gender;
     public GenderEntity map(GenderDto dto){
+        GenderEntity.Gender gender;
+        if(dto.getGender().equals("Male"))
+            gender = GenderEntity.Gender.Male;
+        else
+            gender = GenderEntity.Gender.Female;
         GenderEntity entity = new GenderEntity(dto.getCount(),
-                dto.getGender(),
+                gender,
                 dto.getName(),
                 dto.getProbability()
         );

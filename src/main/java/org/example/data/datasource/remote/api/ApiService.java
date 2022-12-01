@@ -4,8 +4,9 @@ import org.example.data.datasource.dto.GenderDto;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface ApiService {
-    @GET("/{name}")
-    Call<GenderDto> getGender(@Path(value = "name", encoded = true) String name);
+    @GET("")
+    Call<GenderDto> getGender(@Query(value = "name", encoded = true) String name);
 }

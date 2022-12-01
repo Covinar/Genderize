@@ -4,7 +4,7 @@ import org.example.domain.entitiy.GenderEntity;
 
 public class GenderDto {
     private int count;
-    private GenderEntity.Gender gender;
+    private String gender;
     private String name;
     private double probability;
 
@@ -12,7 +12,7 @@ public class GenderDto {
         return count;
     }
 
-    public GenderEntity.Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
